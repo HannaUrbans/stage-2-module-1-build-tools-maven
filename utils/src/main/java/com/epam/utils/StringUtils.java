@@ -2,6 +2,8 @@ package com.epam.utils;
 
 public class StringUtils {
     public static boolean isPositiveNumber(String str) {
+       if (str != null)
+        {
         try {
             Double number = Double.parseDouble(str);
             if (number > 0) {
@@ -11,6 +13,8 @@ public class StringUtils {
             }
         }
         catch (NumberFormatException e)
-        {return false;}
+        {return false;}}
+       return false;
     }
+
 }
